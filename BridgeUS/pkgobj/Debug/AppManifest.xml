@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Published:70EDFC97-B41D-43C5-B751-7C00AD999804-->
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="BridgeUS" ProductID="{2befd6d0-1814-466f-b4ee-09e46937e69d}" Version="1.0.0.3" SharePointMinVersion="16.0.0.0">
+  <Properties>
+    <Title>BridgeUS</Title>
+    <StartPage>https://bridgeus.azurewebsites.net/?{StandardTokens}</StartPage>
+  </Properties>
+  <AppPrincipal>
+    <RemoteWebApplication ClientId="ce2f2eb1-6867-42ab-91f8-84411e7a45aa" />
+  </AppPrincipal>
+  <AppPermissionRequests AllowAppOnlyPolicy="true">
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
+  </AppPermissionRequests>
+</App>

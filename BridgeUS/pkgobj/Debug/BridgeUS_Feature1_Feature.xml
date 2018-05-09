@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="81075667-8536-4144-bb2c-aa9f7d411fd8" Scope="Web" Title="BridgeUS Feature1" Version="1.0.0.3">
+  <ElementManifests>
+    <ElementManifest Location="appwebs\Elements.xml" />
+    <ElementManifest Location="Module1\Elements.xml" />
+    <ElementFile Location="Module1\Sample.txt" />
+    <ElementManifest Location="TestMVCInstance\Elements.xml" />
+    <ElementManifest Location="TestMVC\Elements.xml" />
+    <ElementFile Location="TestMVC\Schema.xml" />
+  </ElementManifests>
+  <UpgradeActions>
+    <VersionRange>
+      <ApplyElementManifests>
+        <ElementManifest Location="appwebs\Elements.xml" />
+        <ElementManifest Location="Module1\Elements.xml" />
+        <ElementManifest Location="TestMVCInstance\Elements.xml" />
+        <ElementManifest Location="TestMVC\Elements.xml" />
+      </ApplyElementManifests>
+    </VersionRange>
+  </UpgradeActions>
+</Feature>

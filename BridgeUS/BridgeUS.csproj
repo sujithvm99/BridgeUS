@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F111C36A-A948-47A0-B358-5A73359EFCF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BridgeUS</RootNamespace>
+    <AssemblyName>BridgeUS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.1</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>12.2</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{2091edd0-92a6-41d3-82e6-5dfb265bc44d}</AppFeaturePartId>
+    <WspPartId>{b35d208f-609d-4052-bac3-ef330ef963cb}</WspPartId>
+    <WorkflowPartId>{5a76b847-f1da-4b1d-a1ce-425753833f81}</WorkflowPartId>
+    <CspkgPartId>{c04d3110-3c8f-4fbe-891f-ae40bdff070e}</CspkgPartId>
+    <SqlPackagePartId>{732f43d0-262f-4d1d-b54c-7ba6937d0942}</SqlPackagePartId>
+    <ActivePublishProfile>BridgeUS - Web Deploy</ActivePublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="appwebs\Elements.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Lists\TestMVC\Elements.xml" />
+    <Content Include="Lists\TestMVC\Schema.xml" />
+    <Content Include="Lists\TestMVC\TestMVCInstance\Elements.xml" />
+    <Content Include="Module1\Elements.xml" />
+    <Content Include="Module1\Sample.txt" />
+    <Content Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BridgeUSWeb\BridgeUSWeb.csproj">
+      <Project>{83AE3DAF-AFCB-497B-B2B1-6A6AF02D13AA}</Project>
+      <Name>BridgeUSWeb</Name>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <OutputItemType>SharePointWebProjectOutput</OutputItemType>
+      <RoleName>BridgeUSWeb</RoleName>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="appwebs\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{707fda4f-d2b9-4d44-9968-2bbe2af19efc}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{161fd1d9-fc1e-4c52-91dc-a28f56234a8e}</FeatureId>
+    </None>
+    <None Include="Lists\TestMVC\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c78a725b-8135-4b9b-923c-d86e3f3fc1fc}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\TestMVC\TestMVCInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4d046d5f-59c9-4094-89c1-0ab37aefda69}</SharePointProjectItemId>
+    </None>
+    <None Include="Module1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{236dfdf0-accb-4503-8bb5-f4e0a399e031}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{ff0dbb3b-6cb2-4b6f-b547-89aefe928893}</PackageId>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="eb8e4b81-4c2c-4148-b618-65bcfc49b50f" solutionId="eb8e4b81-4c2c-4148-b618-65bcfc49b50f" resetWebServer="false" sharePointProductVersion="16.0" name="BridgeUS" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="161fd1d9-fc1e-4c52-91dc-a28f56234a8e" />
+  </features>
+</package>
